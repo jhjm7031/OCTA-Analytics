@@ -1,92 +1,92 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-  background-color: #f0f0f0; /* Light background color */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0; /* Light background color */
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
 }
 
 .logo {
-  height: 50px;
+    height: 50px;
 }
 
 .nav-links {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .nav-links li {
-  margin: 0 15px;
+    margin: 0 15px;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .intro {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
 }
 
 .intro h1 {
-  margin-bottom: 10px;
-  font-size: 2.5em;
-  color: #000; /* Dark text for contrast */
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: #000; /* Dark text for contrast */
 }
 
 .subtitle {
-  font-size: 1.5em;
-  color: #666;
+    font-size: 1.5em;
+    color: #666;
 }
 
 .section-block {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .section-block .content {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque */
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px; /* Set a max width for the content */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly more opaque */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* Set a max width for the content */
 }
 
 .section-block .content p {
-  margin-bottom: 20px;
-  font-size: 1.2em;
-  color: #000; /* Dark text for readability */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #000; /* Dark text for readability */
 }
 
 .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #e74c3c; /* Red button */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c; /* Red button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
