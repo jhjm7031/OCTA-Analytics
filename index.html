@@ -4,48 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCTA Analytics</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="index.html">
-                    <img src="assets/logo.gif" alt="OCTA Analytics">
-                </a>
+            <div class="logo">OCTA</div>
+            <div class="navbar-links">
+                <a href="#product">Product</a>
+                <a href="#research">Research</a>
+                <a href="#about">About</a>
             </div>
-            <ul class="navbar-nav">
-                <li><a href="product.html">Product</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
         </nav>
     </header>
     <main>
         <section class="hero">
             <h1>Welcome to OCTA Analytics</h1>
             <p>What We Do?</p>
+            <p>A/B testing is the tool we use to analyze the variable relationship and determine the validity of prediction</p>
+            <button onclick="location.href='product.html'">Product</button>
         </section>
-        <section class="features">
-            <div class="feature-item">
-                <img src="assets/image1.png" alt="A/B Testing">
-                <p>A/B testing is the tool we use to analyze the variable relationship and determine the validity of prediction</p>
-                <a href="product.html" class="cta-button">Product</a>
-            </div>
-            <div class="feature-item">
-                <img src="assets/image2.png" alt="Machine Learning">
-                <p>Machine learning is the foundation of accurate prediction based on big data</p>
-                <a href="research.html" class="cta-button">Research</a>
-            </div>
-            <div class="feature-item">
-                <img src="assets/image3.png" alt="Team">
-                <p>Most importantly, we have brilliant people here</p>
-                <a href="about.html" class="cta-button">About</a>
-            </div>
+        <section class="section" id="product">
+            <h2>Product</h2>
+            <p>Machine learning is the foundation of accurate prediction based on big data</p>
+            <button onclick="location.href='research.html'">Research</button>
+        </section>
+        <section class="section" id="research">
+            <h2>Research</h2>
+            <p>Most importantly, we have brilliant people here</p>
+            <button onclick="location.href='about.html'">About</button>
         </section>
     </main>
     <footer>
-        <p>Phone number: 206-386-5456 | Email: zerolinux@protonmail.com</p>
+        <p>Phone number: 206-369-5456</p>
+        <p>Email: zeruizhou7@gmail.com</p>
     </footer>
 </body>
 </html>
