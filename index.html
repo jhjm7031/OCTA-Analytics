@@ -1,49 +1,53 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCTA Analytics</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="navbar-brand">
-                <a href="index.html">
-                    <img src="assets/logo.gif" alt="OCTA Analytics">
-                </a>
-            </div>
-            <ul class="navbar-nav">
-                <li><a href="product.html">Product</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="about.html">About</a></li>
+            <img src="logo.gif" alt="OCTA Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="#product">Product</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="hero">
+        <section class="intro">
             <h1>Welcome to OCTA Analytics</h1>
-            <p>What We Do?</p>
+            <p class="subtitle">What We Do?</p>
         </section>
-        <section class="features">
-            <div class="feature-item">
-                <img src="assets/image1.png" alt="A/B Testing">
+
+        <section id="product" class="section-block" style="background-image: url('product-background.png');">
+            <div class="content">
                 <p>A/B testing is the tool we use to analyze the variable relationship and determine the validity of prediction</p>
-                <a href="product.html" class="cta-button">Product</a>
+                <a href="#" class="btn">Product</a>
             </div>
-            <div class="feature-item">
-                <img src="assets/image2.png" alt="Machine Learning">
+        </section>
+
+        <section id="research" class="section-block" style="background-image: url('research-background.png');">
+            <div class="content">
                 <p>Machine learning is the foundation of accurate prediction based on big data</p>
-                <a href="research.html" class="cta-button">Research</a>
+                <a href="#" class="btn">Research</a>
             </div>
-            <div class="feature-item">
-                <img src="assets/image3.png" alt="Team">
+        </section>
+
+        <section id="about" class="section-block" style="background-image: url('about-background.png');">
+            <div class="content">
                 <p>Most importantly, we have brilliant people here</p>
-                <a href="about.html" class="cta-button">About</a>
+                <a href="#" class="btn">About</a>
             </div>
         </section>
     </main>
+
     <footer>
-        <p>Phone number: 206-386-5456 | Email: zerolinux@protonmail.com</p>
+        <p>Phone number: 206-369-5456</p>
+        <p>Email: zeruizhou7@gmail.com</p>
     </footer>
 </body>
 </html>
