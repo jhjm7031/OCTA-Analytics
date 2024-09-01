@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  height: 100%;
+  min-height: 100%; /* Ensure minimum height for short content */
   background-color: black;
   color: #fff;
   text-align: center;
@@ -59,7 +59,7 @@ body, html {
 }
 
 .feature-item {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.6); /* Increased opacity for readability */
   padding: 20px;
   width: 80%;
   border-radius: 10px;
@@ -91,7 +91,8 @@ footer {
   padding: 20px;
   background-color: #000;
   color: #fff;
-  position: absolute;
+  text-align: center;
+  position: fixed; /* Changed to fixed to keep it visible */
   width: 100%;
   bottom: 0;
 }
