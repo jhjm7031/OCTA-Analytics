@@ -5,9 +5,7 @@ body, html {
   background-color: black;
   color: #fff;
   text-align: center;
-  min-height: 100vh; /* Ensures the minimum height of the body is the viewport height */
-  display: flex;
-  flex-direction: column; /* This helps in managing footer at the bottom */
+  height: 100%; /* Consider using min-height for full viewport height */
 }
 
 .navbar {
@@ -39,7 +37,6 @@ body, html {
   padding: 50px 20px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/background.png') no-repeat center center;
   background-size: cover;
-  flex-grow: 1; /* Allows hero to expand */
 }
 
 .hero h1 {
@@ -59,19 +56,19 @@ body, html {
   justify-content: center;
   padding: 20px;
   gap: 20px;
-  flex-grow: 1; /* Allows features section to expand */
 }
 
 .feature-item {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
-  width: 80%;
+  width: 80%; /* Use relative width */
+  max-width: 600px; /* Set maximum width to ensure readability */
   border-radius: 10px;
   text-align: center;
 }
 
 .feature-item img {
-  width: 100px;
+  width: 100px; /* Ensure images are responsive */
   height: auto;
   margin-bottom: 20px;
 }
@@ -97,5 +94,22 @@ footer {
   color: #fff;
   text-align: center;
   width: 100%;
-  margin-top: auto; /* Pushes it to the bottom */
+  position: fixed; /* Consider changing to 'static' if the footer should scroll with content */
+  bottom: 0;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .feature-item, .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 10px; /* Add space between menu items */
+  }
+
+  .hero h1, .hero p {
+    font-size: smaller; /* Adjust font size for smaller screens */
+  }
 }
