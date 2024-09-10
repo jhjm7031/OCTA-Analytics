@@ -2,34 +2,31 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    min-height: 100vh;
+    background-color: black; /* Retained background color */
+    color: #fff;
     overflow-x: hidden;
-    background-color: #f4f4f4;
 }
 
-/* Navbar styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #000;
-    padding: 1rem;
-    color: #fff;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.navbar-brand a img {
+.logo {
     height: 50px;
+    width: auto;
 }
 
 .navbar-nav {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     margin: 0;
     padding: 0;
 }
@@ -38,40 +35,38 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
-/* Offer section styling */
-.offer {
+.navbar-nav li a:hover {
+    color: #e82127; /* Hover color */
+}
+
+.offer-section {
+    padding: 2rem 0;
     text-align: center;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.offer h1 {
-    font-size: 2.5rem;
-    color: #333;
+.section-title {
+    font-size: 2rem;
     margin-bottom: 2rem;
-    font-weight: bold;
+    color: #fff;
 }
 
-/* Carousel container */
 .offer-carousel {
     display: flex;
     align-items: center;
     position: relative;
-    overflow: hidden;
+    max-width: 1200px;
     margin: 0 auto;
-    width: 100%; /* Ensure the carousel takes up the full width */
+    overflow: hidden;
 }
 
-/* Carousel navigation buttons */
 .carousel-nav {
     background-color: #fff;
     border: none;
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -79,66 +74,61 @@ body {
     z-index: 1000;
     color: #000;
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    width: 40px; /* Set a fixed width for the buttons */
-    height: 40px; /* Set a fixed height for the buttons */
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-nav.left {
-    left: 10px; /* Adjust the left position */
+    left: 10px;
 }
 
 .carousel-nav.right {
-    right: 10px; /* Adjust the right position */
+    right: 10px;
 }
 
-/* Offer cards container */
 .offer-container {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 2rem 0;
-    gap: 1rem;
-    width: calc(100% - 80px); /* Adjust width to account for carousel nav buttons */
-    margin: 0 auto; /* Center the container */
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin: 0 2rem; /* Adjust for arrows */
 }
 
-/* Offer card styling */
 .offer-card {
-    flex: 0 0 250px; /* Set a fixed width for the cards */
-    background: #fff;
+    background-color: #fff;
+    color: #000;
+    flex: 0 0 280px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    margin: 0 10px; /* Adjust margin for spacing */
+    margin: 0 10px;
     text-align: left;
-    max-width: 250px; /* Ensure cards are of consistent size */
+    max-width: 280px;
 }
 
-.offer-card img {
+.offer-image {
     width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0; /* Rounded top corners */
-    max-height: 150px; /* Set a maximum height for the image */
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
 .offer-card h2 {
     color: #e82127;
-    font-size: 1.2rem; /* Adjust font size */
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    text-align: center; /* Center align the text */
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
 }
 
 .offer-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: #333;
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    text-align: center; /* Center align the text */
 }
 
 /* Footer styling */
