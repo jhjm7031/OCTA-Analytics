@@ -2,15 +2,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCTA Analytics - What We Offer</title>
-    <link rel="stylesheet" href="offer.css">
+    <title>OCTA Analytics - Contact</title>
+    <link rel="stylesheet" href="contact.css"> <!-- Link to the contact-specific CSS file -->
+    <script src="script.js" defer></script> <!-- Link to the JavaScript file -->
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="navbar-brand">
                 <a href="index.html">
-                    <img src="assets/logo.gif" alt="OCTA Analytics Logo" class="logo">
+                    <img src="assets/logo.gif" alt="OCTA Analytics">
                 </a>
             </div>
             <ul class="navbar-nav">
@@ -21,50 +22,37 @@
         </nav>
     </header>
     <main>
-        <section class="offer-section">
-            <h1 class="section-title">What We Offer</h1>
-            <div class="offer-carousel">
-                <!-- Left Navigation Arrow -->
-                <button class="carousel-nav left">&lt;</button>
-                <!-- Cards Container -->
-                <div class="offer-container">
-                    <div class="offer-card">
-                        <div class="image-container">
-                            <img src="assets/logo.gif" alt="Data-Driven Insights Icon" class="offer-image">
-                        </div>
-                        <h2>Data-Driven Insights</h2>
-                        <p>Empower your business with actionable insights through predictive analysis, A/B testing, and machine learning solutions. We use advanced analytics to identify patterns, trends, and correlations in your data, helping you uncover opportunities and mitigate risks.</p>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <div class="chat-box">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
                     </div>
-                    <div class="offer-card">
-                        <div class="image-container">
-                            <img src="assets/logo.gif" alt="Optimize Strategies Icon" class="offer-image">
-                        </div>
-                        <h2>Optimize Strategies</h2>
-                        <p>Improve customer engagement and drive operational efficiency by transforming raw data into meaningful strategies. Our strategy optimization services focus on increasing ROI, reducing costs, and enhancing overall business performance.</p>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
                     </div>
-                    <div class="offer-card">
-                        <div class="image-container">
-                            <img src="assets/logo.gif" alt="Tailored Solutions Icon" class="offer-image">
-                        </div>
-                        <h2>Tailored Data Solutions</h2>
-                        <p>Customized solutions to meet your specific needs, from refining marketing strategies to forecasting trends with predictive analytics. Our bespoke data solutions ensure that you get the most relevant insights that drive meaningful action and growth.</p>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" placeholder="Your Title">
                     </div>
-                    <div class="offer-card">
-                        <div class="image-container">
-                            <img src="assets/logo.gif" alt="Machine Learning Icon" class="offer-image">
-                        </div>
-                        <h2>Machine Learning Models</h2>
-                        <p>Enhance operational efficiency with advanced machine learning models designed to support informed decision-making. Whether it’s automating routine tasks, predicting future trends, or understanding customer sentiment, we provide scalable AI-driven solutions to fit your needs.</p>
+                    <div class="form-group">
+                        <label for="organization">Organization</label>
+                        <input type="text" id="organization" name="organization" placeholder="Your Organization">
                     </div>
-                </div>
-                <!-- Right Navigation Arrow -->
-                <button class="carousel-nav right">&gt;</button>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 OCTA Analytics. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

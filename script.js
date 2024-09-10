@@ -18,8 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
-    alert('Thank you for contacting us! We will get back to you soon.');
-    // Here, you would normally send the form data to your server using AJAX or a form handler
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        alert('Thank you for contacting us! We will get back to you soon.');
+        contactForm.reset();
+    });
 });
