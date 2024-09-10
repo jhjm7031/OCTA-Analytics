@@ -1,7 +1,11 @@
 body {
+    margin: 0; /* Ensure no default margins */
+    padding: 0; /* Ensure no default padding */
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    min-height: 100vh; /* Ensure the body can expand and allow scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navbar styling */
@@ -12,6 +16,9 @@ body {
     background-color: #000;
     padding: 1rem;
     color: #fff;
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Position navbar at the top */
+    z-index: 1000; /* Ensure navbar is above other content */
 }
 
 .navbar-brand a {
@@ -24,21 +31,25 @@ body {
     list-style: none;
     display: flex;
     gap: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
+    padding: 5px 10px; /* Add some padding for better touch experience */
 }
 
-/* Product section styling */
+/* Offer section styling */
 .offer {
     text-align: center;
     padding: 2rem 1rem;
+    max-width: 800px; /* Set a maximum width for readability */
+    margin: 0 auto; /* Center align the offer section */
+    width: 90%; /* Relative width for responsiveness */
 }
-
-
 
 /* Footer styling */
 footer {
@@ -46,21 +57,28 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: absolute;
+    position: relative; /* Ensure footer scrolls with content */
     width: 100%;
-    bottom: 0;
+    margin-top: 20px; /* Add margin to separate footer */
 }
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .feature-item, .navbar-nav {
-      flex-direction: column;
-      width: 100%;
+    .navbar-nav {
+        flex-direction: column; /* Stack navbar items */
+        align-items: center; /* Center-align items on smaller screens */
+        width: 100%; /* Ensure full width for navbar */
     }
-  
+
     .navbar-nav li {
-      margin-bottom: 10px; /* Add space between menu items */
+        margin-bottom: 10px; /* Add space between menu items */
     }
-  
-    .hero h1, .hero p {
-      font-size: smaller; /* Adjust font size for smaller screens */
+
+    .navbar-brand a {
+        font-size: 1.2rem; /* Adjust brand font size for smaller screens */
     }
-  }
+
+    .offer {
+        width: 95%; /* Make the offer section slightly wider on small screens */
+    }
+}
