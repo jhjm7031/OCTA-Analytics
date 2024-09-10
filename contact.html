@@ -3,8 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OCTA Analytics - Contact</title>
-    <link rel="stylesheet" href="contact.css">
-    <script src="contact.js" defer></script> 
+    <link rel="stylesheet" href="contact.css"> <!-- Link to the contact-specific CSS file -->
 </head>
 <body>
     <header>
@@ -54,5 +53,22 @@
     <footer>
         <p>&copy; 2024 OCTA Analytics. All rights reserved.</p>
     </footer>
+
+    <!-- Inline JavaScript for form submission handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+
+                // Display a confirmation message
+                alert('Thank you for contacting us! We will get back to you soon.');
+
+                // Optionally, reset the form fields after submission
+                contactForm.reset();
+            });
+        });
+    </script>
 </body>
 </html>
