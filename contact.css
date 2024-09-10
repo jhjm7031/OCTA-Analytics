@@ -41,14 +41,14 @@ body {
 }
 
 .navbar-nav li a:hover {
-    color: #e82127; /* Hover effect */
+    color: #e82127;
 }
 
 /* Contact section styling */
 .contact {
     padding: 4rem 2rem;
     text-align: center;
-    max-width: 800px; /* Restrict the maximum width */
+    max-width: 600px; /* Restrict the maximum width */
     margin: 0 auto; /* Center align the section */
 }
 
@@ -58,15 +58,62 @@ body {
     color: #fff;
 }
 
-.contact p {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 1.5rem;
+/* Chat-box styling */
+.chat-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact p span {
-    color: #e82127; /* Highlight email with red color */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e82127;
+    outline: none;
+    background-color: #fff;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-button {
+    background-color: #e82127;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #c91723;
 }
 
 /* Footer styling */
@@ -98,7 +145,12 @@ footer {
         font-size: 2rem; /* Adjust font size for smaller screens */
     }
 
-    .contact p {
-        font-size: 1rem; /* Adjust font size for smaller screens */
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem; /* Adjust input font size for smaller screens */
+    }
+
+    .submit-button {
+        font-size: 0.9rem; /* Adjust button font size for smaller screens */
     }
 }
