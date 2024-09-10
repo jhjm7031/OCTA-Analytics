@@ -6,6 +6,7 @@ body {
     color: #333;
     min-height: 100vh; /* Ensure the body can expand and allow scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f8f8f8; /* Light background color for better contrast */
 }
 
 /* Navbar styling */
@@ -45,10 +46,45 @@ body {
 /* Offer section styling */
 .offer {
     text-align: center;
-    padding: 2rem 1rem;
-    max-width: 800px; /* Set a maximum width for readability */
-    margin: 0 auto; /* Center align the offer section */
+    padding: 3rem 1rem; /* Increase padding for more spacing */
+    max-width: 1200px; /* Increase maximum width for readability */
+    margin: 2rem auto; /* Center align the offer section with some margin */
     width: 90%; /* Relative width for responsiveness */
+}
+
+.offer-container {
+    display: grid; /* Use grid layout for better organization */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+    margin-top: 2rem; /* Margin above the cards */
+}
+
+.offer-card {
+    background-color: #fff; /* White background for each card */
+    border-radius: 10px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1.5rem;
+    text-align: left; /* Align text to the left for better readability */
+    transition: transform 0.3s; /* Smooth hover effect */
+    border-left: 4px solid #e82127; /* Accent border on the left side */
+}
+
+.offer-card h2 {
+    color: #e82127; /* Accent color for headers */
+    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Slightly larger font for card headers */
+}
+
+.offer-card p {
+    font-size: 1rem;
+    line-height: 1.8; /* Increase line-height for readability */
+    color: #555; /* Softer color for better contrast */
+    margin-bottom: 1rem; /* Margin below paragraph */
+}
+
+.offer-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Footer styling */
@@ -59,7 +95,8 @@ footer {
     padding: 1rem 0;
     position: relative; /* Ensure footer scrolls with content */
     width: 100%;
-    margin-top: 20px; /* Add margin to separate footer */
+    margin-top: 40px; /* Add margin to separate footer */
+    font-size: 0.9rem; /* Smaller font for footer text */
 }
 
 /* Media Queries for responsiveness */
@@ -80,5 +117,13 @@ footer {
 
     .offer {
         width: 95%; /* Make the offer section slightly wider on small screens */
+    }
+
+    .offer-card h2 {
+        font-size: 1.5rem; /* Adjust header size for smaller screens */
+    }
+
+    .offer-card p {
+        font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
     }
 }
