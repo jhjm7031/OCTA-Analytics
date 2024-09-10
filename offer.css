@@ -95,15 +95,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-/* Icon styling */
-.offer-icon {
-    position: absolute; /* Position icons at the top right */
-    top: 20px;
-    right: 20px;
-    width: 40px; /* Icon size */
-    height: auto;
-    opacity: 0.8; /* Slightly transparent icons */
-}
 
 /* Footer styling */
 footer {
