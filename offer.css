@@ -109,14 +109,15 @@ body {
     margin: 0 10px;
     text-align: center;
     max-width: 250px;
+    overflow: hidden; /* Ensure content does not overflow */
 }
 
 .offer-image {
     width: 100%;
-    height: 120px; /* Adjusted height */
-    object-fit: contain;
+    max-height: 100px; /* Ensure a fixed height */
+    object-fit: contain; /* Adjust image within the box */
     margin-bottom: 1rem;
-    border-radius: 10px;
+    display: block; /* Ensure image is treated as a block element */
 }
 
 .offer-card h2 {
