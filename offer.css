@@ -1,12 +1,12 @@
 body {
-    margin: 0; /* Ensure no default margins */
-    padding: 0; /* Ensure no default padding */
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    min-height: 100vh; /* Ensure the body can expand and allow scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #f4f4f4; /* Light background for better contrast */
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
 }
 
 /* Navbar styling */
@@ -17,15 +17,13 @@ body {
     background-color: #000;
     padding: 1rem;
     color: #fff;
-    position: sticky; /* Make navbar sticky */
-    top: 0; /* Position navbar at the top */
-    z-index: 1000; /* Ensure navbar is above other content */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar-brand a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
+.navbar-brand a img {
+    height: 50px;
 }
 
 .navbar-nav {
@@ -40,61 +38,94 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    padding: 5px 10px; /* Add some padding for better touch experience */
+    padding: 5px 10px;
 }
 
 /* Offer section styling */
 .offer {
     text-align: center;
-    padding: 4rem 2rem; /* Increase padding for more spacing */
-    max-width: 1200px; /* Increase maximum width for readability */
-    margin: 3rem auto; /* Center align the offer section with some margin */
-    width: 90%; /* Relative width for responsiveness */
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .offer h1 {
-    font-size: 3rem; /* Increased font size for emphasis */
+    font-size: 2.5rem;
     color: #333;
-    margin-bottom: 1.5rem; /* Increased margin below heading */
-    font-weight: bold; /* Make the heading bold */
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
 
+/* Carousel container */
+.offer-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+/* Carousel navigation buttons */
+.carousel-nav {
+    background-color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    color: #000;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav.left {
+    left: 0;
+}
+
+.carousel-nav.right {
+    right: 0;
+}
+
+/* Offer cards container */
 .offer-container {
-    display: grid; /* Use grid layout for better organization */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
-    gap: 2rem; /* Space between cards */
-    margin-top: 2rem; /* Margin above the cards */
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 2rem 0;
+    gap: 1rem;
 }
 
 .offer-card {
-    background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%); /* Subtle gradient background */
-    border-radius: 12px; /* Rounded corners for modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 2rem;
-    text-align: left; /* Align text to the left for better readability */
-    transition: transform 0.3s; /* Smooth hover effect */
-    border-left: 5px solid #e82127; /* Accent border on the left side */
-    position: relative; /* Position relative for icons */
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+    text-align: left;
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
 .offer-card h2 {
-    color: #e82127; /* Red color for smaller categories */
-    margin-bottom: 1rem;
-    font-size: 1.8rem; /* Slightly larger font for card headers */
+    color: #e82127;
+    font-size: 1.5rem;
+    margin-top: 1rem;
 }
 
 .offer-card p {
-    font-size: 1rem;
-    line-height: 1.8; /* Increase line-height for readability */
-    color: #555; /* Softer color for better contrast */
-    margin-bottom: 1rem; /* Margin below paragraph */
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.5rem;
 }
-
-.offer-card:hover {
-    transform: translateY(-10px); /* Lift card on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-
 
 /* Footer styling */
 footer {
@@ -102,47 +133,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: relative; /* Ensure footer scrolls with content */
-    width: 100%;
-    margin-top: 40px; /* Add margin to separate footer */
-    font-size: 0.9rem; /* Smaller font for footer text */
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column; /* Stack navbar items */
-        align-items: center; /* Center-align items on smaller screens */
-        width: 100%; /* Ensure full width for navbar */
-    }
-
-    .navbar-nav li {
-        margin-bottom: 10px; /* Add space between menu items */
-    }
-
-    .navbar-brand a {
-        font-size: 1.2rem; /* Adjust brand font size for smaller screens */
-    }
-
-    .offer {
-        width: 95%; /* Make the offer section slightly wider on small screens */
-    }
-
-    .offer-card {
-        padding: 1.5rem; /* Adjust padding for smaller screens */
-    }
-
-    .offer-card h2 {
-        font-size: 1.5rem; /* Adjust header size for smaller screens */
-    }
-
-    .offer-card p {
-        font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
-    }
-
-    .offer-icon {
-        width: 30px; /* Smaller icons for smaller screens */
-        top: 15px;
-        right: 15px;
-    }
+    margin-top: 2rem;
 }
