@@ -32,15 +32,10 @@ body {
     font-size: 1rem;
 }
 
-/* Product section styling */
-.product {
+/* Research section styling */
+.case {
     text-align: center;
     padding: 2rem 1rem;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
 }
 
 /* Footer styling */
@@ -53,3 +48,17 @@ footer {
     width: 100%;
     bottom: 0;
 }
+@media (max-width: 768px) {
+    .feature-item, .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-nav li {
+      margin-bottom: 10px; /* Add space between menu items */
+    }
+  
+    .hero h1, .hero p {
+      font-size: smaller; /* Adjust font size for smaller screens */
+    }
+  }

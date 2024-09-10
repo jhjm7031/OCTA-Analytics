@@ -32,11 +32,13 @@ body {
     font-size: 1rem;
 }
 
-/* Research section styling */
-.research {
+/* Product section styling */
+.offer {
     text-align: center;
     padding: 2rem 1rem;
 }
+
+
 
 /* Footer styling */
 footer {
@@ -48,3 +50,17 @@ footer {
     width: 100%;
     bottom: 0;
 }
+@media (max-width: 768px) {
+    .feature-item, .navbar-nav {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-nav li {
+      margin-bottom: 10px; /* Add space between menu items */
+    }
+  
+    .hero h1, .hero p {
+      font-size: smaller; /* Adjust font size for smaller screens */
+    }
+  }
