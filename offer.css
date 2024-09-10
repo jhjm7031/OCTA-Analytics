@@ -1,12 +1,12 @@
 body {
     margin: 0; /* Ensure no default margins */
     padding: 0; /* Ensure no default padding */
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     min-height: 100vh; /* Ensure the body can expand and allow scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    background-color: #f8f8f8; /* Light background color for better contrast */
+    background-color: #f4f4f4; /* Light background for better contrast */
 }
 
 /* Navbar styling */
@@ -46,31 +46,39 @@ body {
 /* Offer section styling */
 .offer {
     text-align: center;
-    padding: 3rem 1rem; /* Increase padding for more spacing */
+    padding: 4rem 2rem; /* Increase padding for more spacing */
     max-width: 1200px; /* Increase maximum width for readability */
-    margin: 2rem auto; /* Center align the offer section with some margin */
+    margin: 3rem auto; /* Center align the offer section with some margin */
     width: 90%; /* Relative width for responsiveness */
+}
+
+.offer h1 {
+    font-size: 3rem; /* Increased font size for emphasis */
+    color: #333;
+    margin-bottom: 1.5rem; /* Increased margin below heading */
+    font-weight: bold; /* Make the heading bold */
 }
 
 .offer-container {
     display: grid; /* Use grid layout for better organization */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
     gap: 2rem; /* Space between cards */
     margin-top: 2rem; /* Margin above the cards */
 }
 
 .offer-card {
-    background-color: #fff; /* White background for each card */
-    border-radius: 10px; /* Rounded corners for modern look */
+    background: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%); /* Subtle gradient background */
+    border-radius: 12px; /* Rounded corners for modern look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: left; /* Align text to the left for better readability */
     transition: transform 0.3s; /* Smooth hover effect */
-    border-left: 4px solid #e82127; /* Accent border on the left side */
+    border-left: 5px solid #e82127; /* Accent border on the left side */
+    position: relative; /* Position relative for icons */
 }
 
 .offer-card h2 {
-    color: #e82127; /* Accent color for headers */
+    color: #e82127; /* Red color for smaller categories */
     margin-bottom: 1rem;
     font-size: 1.8rem; /* Slightly larger font for card headers */
 }
@@ -83,8 +91,18 @@ body {
 }
 
 .offer-card:hover {
-    transform: translateY(-5px); /* Lift card on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Icon styling */
+.offer-icon {
+    position: absolute; /* Position icons at the top right */
+    top: 20px;
+    right: 20px;
+    width: 40px; /* Icon size */
+    height: auto;
+    opacity: 0.8; /* Slightly transparent icons */
 }
 
 /* Footer styling */
@@ -119,11 +137,21 @@ footer {
         width: 95%; /* Make the offer section slightly wider on small screens */
     }
 
+    .offer-card {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+
     .offer-card h2 {
         font-size: 1.5rem; /* Adjust header size for smaller screens */
     }
 
     .offer-card p {
         font-size: 0.9rem; /* Adjust paragraph size for smaller screens */
+    }
+
+    .offer-icon {
+        width: 30px; /* Smaller icons for smaller screens */
+        top: 15px;
+        right: 15px;
     }
 }
